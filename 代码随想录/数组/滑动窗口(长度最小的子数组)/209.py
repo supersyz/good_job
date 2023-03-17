@@ -1,6 +1,5 @@
 #第一种方法，sum(nums[a:b])操作很费时间，不要用，替换成sums = 0, 在循环中加减
 #while和for的区别：
-#while不用考虑下标，但是while是先判断条件，再执行，不能保证执行的时候
 
 
 
@@ -23,6 +22,7 @@ class Solution:
                 
 
 ###想清楚先做什么再做什么，是先判断还是先操作！！！
+#少写多想
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         fast,slow = 0,0
