@@ -3,7 +3,7 @@
 #注意，为什么慢的会走在一圈内的分析！
 
 
-
+##判断是否存在，就要想到hash表
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -31,3 +31,16 @@ class Solution:
         
         if flag == 0:
             return None
+        
+
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        #1. 判断是否有环
+        cur = head
+        dic = {}
+        while cur is not None:
+            if cur in dic:
+                return cur
+            dic[cur] = 1
+            cur = cur.next
+        return None
