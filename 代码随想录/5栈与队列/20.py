@@ -10,7 +10,7 @@ class Solution:
                 stk.append(')')
             elif s[i] == '{':
                 stk.append('}')
-            elif s[i] == '[':
+            elif s[i] == '[':                        
                 stk.append(']')
             else:
                 if not stk:

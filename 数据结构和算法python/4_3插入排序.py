@@ -15,15 +15,29 @@ def insert_sort2(ls):
                 break
 
 
-def insert_sort(ls):
-    for left_numbers in range(1,len(ls)):
 
-        for i in range(left_numbers,0,-1):
-            if ls[i] < ls[i-1]:
-                ls[i],ls[i-1] = ls[i-1],ls[i]
-            else:
-                break
+
+
+# def insert_sort(ls):
+#     for left_numbers in range(1,len(ls)):
+
+#         for i in range(left_numbers,0,-1):
+#             if ls[i] < ls[i-1]:
+#                 ls[i],ls[i-1] = ls[i-1],ls[i]
+#             else:
+#                 break
                 
+
+# def insert_sort(ls):
+#     for left_number in range(1,len(ls)):
+#         for i in range(left_number,0,-1):
+#             if ls[i] < ls[i-1]:
+#                 ls[i],ls[i-1] = ls[i-1],ls[i]
+#             else:
+#                 break
+#     return ls
+                
+
 alist = [54,26,93,17,77,31,44,55,20]
-insert_sort2(alist)
+insert_sort(alist)
 print(alist)

@@ -33,6 +33,45 @@ def quick_sort(ls,start,end):
     quick_sort(ls,low+1,end)
 
 
+def quick_sort1(ls,start,end):
+    
+
+    low = start
+    high = end
+    mid_value = ls[start]
+    if start >= end:
+        return
+    while low < high:
+        while low < high:
+            if ls[high] < mid_value:
+                ls[low] = ls[high]
+                low +=1
+                break
+            else:
+                high -= 1
+                
+        
+        while low < high:
+            if ls[low] > mid_value:
+                ls[high] = ls[low]
+                high -= 1
+                break
+            else:
+                low += 1
+    
+    ls[low] = mid_value
+    quick_sort(ls,start,low)
+    quick_sort(ls,low+1,end)
+                
+        
+    
+
+
+
+
+
+
+
 alist = [54,26,93,17,77,31,44,55,20]
-quick_sort(alist,0,len(alist)-1)
+quick_sort1(alist,0,len(alist)-1)
 print(alist)

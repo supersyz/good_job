@@ -4,18 +4,31 @@
 #稳定
 
 
-def bubble_sort(ls):
-    for j in range(len(ls),1,-1):
+# def bubble_sort(ls):
+#     for j in range(len(ls),1,-1):
+#         count = 0
+#         for i in range(j-1):
+#             if ls[i] > ls[i+1]:
+#                 ls[i],ls[i+1] = ls[i+1],ls[i]
+#                 count += 1
+#         if count == 0: break
+                
+
+
+def bubble_sort1(ls):
+    for j in range(len(ls)-1,1,-1):
         count = 0
-        for i in range(j-1):
+        for i in range(j):
             if ls[i] > ls[i+1]:
                 ls[i],ls[i+1] = ls[i+1],ls[i]
                 count += 1
-        if count == 0: break
-                
-                
+        if count ==0:
+            break
+    return ls
+
+
 li = [54,26,93,17,77,31,44,55,20]
-lii = [1,2,3,4]
-bubble_sort(lii)
-print(lii)
+bubble_sort1(li)
+print(li)
             
+
